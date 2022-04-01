@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Commissioner', sans-serif;
+}
+
+:root {
+    /* Primary */
+    --Moderate-cyan: hsl(176, 50%, 47%);
+    --Dark-cyan: hsl(176, 72%, 28%);
+
+     /* Neutral  */
+    --Black: hsl(0, 0%, 0%);
+    --Dark-gray: hsl(0, 0%, 48%);
+}
+
+body{
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(247, 246, 246);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container-header{
+    padding: 5vh 6vw;
+}
+
+.header{
+    background-image: url('/images/image-hero-desktop.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 374px;
+    background-position: bottom center;
+    background-size: cover;
+    min-height: 49vh;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+.nav-list{
+    display: flex;
+    gap: 20px; 
+    list-style-type: none;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
+
+.crowdfunding-container{
+    position: absolute;
+    transform: translateY(-11%);
+    padding: 1rem;
+}
+
+.crowdfunding-box{
+    max-width: 695px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.241);
+    background-color: white;
+    transition: all 0.8s ease-in;
+}
+
+.crowdfunding-box-into-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-margin{
+    margin: 1.5rem 0;
+}
+
+.intro-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo-mastercraft{
+    position: absolute;
+    transform: translate(0, -107%);
+}
+
+.crowdfunding-box-text{
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.crowdfunding-box-text::first-line{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.crowdfunding-box-text p{
+    margin-top: 1rem;
+    color: var(--Dark-gray);
+}
+
+.crowdfunding-btns{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-active {
+    color: #147b74;
+}
+
+
+.back-project{
+    cursor: pointer;
+    background-color: var(--Moderate-cyan);
+    padding: 1.5rem;
+    border-radius: 60px;
+    color: white;
+}
+
+.back-project:hover{
+    background-color: var(--Dark-cyan);
+}
+
+.icon-bookmark-btn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 34% 20px 20px 34%;
+    padding-right: 15px;
+    height: 66px;
+}
+
+.status{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+}
+
+.bar {
+    padding: 0 3rem;
+    border-left: 1px solid var(--Dark-gray);
+    border-right: 1px solid var(--Dark-gray);
+}
+
+.status-number{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.gray{
+    color: var(--Dark-gray);
+}
+
+.progress-bar{
+    height: 10px;
+    display: flex;
+    background-color: rgb(228, 228, 228);
+    border-radius: 10px;
+}
+
+.progress-bar::before{
+    content: "";
+    width: 80%;
+    background-color: var(--Dark-cyan);
+    border-radius: 10px;
+  }
+
+.about-title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p:nth-of-type(1){
+    margin-bottom: 1.5rem;
+}
+
+.card{
+    border:1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    padding: 1.6rem;
+}
+
+.card-space{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card-title{
+    font-size: 1.2rem;
+}
+
+.plege{
+    color: var(--Dark-cyan);
+    font-weight: 600;
+}
+
+.product-description{
+    color: var(--Dark-gray);
+    margin-bottom: 1rem;
+    line-height: 1.6rem;
+}
+
+.quantity-remaining {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quantity-remaining p{
+    font-size: 1.6rem;
+}
+
+.left{
+    font-size: 1rem;
+    color: var(--Dark-gray);
+}
+
+.reward{
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    color: white;
+    background-color: var(--Moderate-cyan);
+    border-radius: 30px;
+}
+
+.reward:hover{
+    background-color: var(--Dark-cyan);
+}
+
+.off{
+    opacity: 0.4;
+}
+ 
+@media (max-width:920px) {
+    .header {
+        background-image: url('/images/image-hero-mobile.jpg');
+    }
+
+    .nav-mobile{
+        cursor: pointer;
+        display: block;
+        background-image: url(/images/icon-hamburger.svg);
+        z-index: 1001;
+        width: 16px;
+        height: 15px;
+        transition: .3s;
+    }
+
+    .nav-mobile.active{
+        background-image: url(/images/icon-close-menu.svg);
+        z-index: 1000;
+        background-repeat: no-repeat;
+    }
+
+    .nav-list {
+        width: 90%;
+        position: absolute;
+        top: 20%;
+        flex-direction: column;
+        background-color: rgb(242, 242, 242);
+        border-radius: 5px;
+        transform: translateX(120%);
+        transition: .3s ease;
+        z-index: 100;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
+    }
+
+    .nav-list li{
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.241);
+    }
+
+    .nav-list li:last-of-type{
+        border-bottom: unset;
+    }
+
+    .nav-links{
+        color: black;
+        font-weight: 500;
+    }
+}
