@@ -180,7 +180,8 @@
     margin-bottom: 1rem;
 }
 
-.modal-thankas-center .got-it {
+.got-it {
+    cursor: pointer;
     padding: 1rem 1.5rem;
     color: white;
     background-color: var(--Moderate-cyan);

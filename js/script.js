@@ -46,28 +46,28 @@ const pledgeInput = document.querySelectorAll('.pledgeInput');
 
 function updateRadioEvents(e) {
     //pegar todos os data-val do modalBoxRadio
-    const t = e.target.getAttribute("data-val");
+    const arrayDataVal = e.target.getAttribute("data-val");
 
     //pegar todos os data-val do dynamicRadio e comparar com o modalBoxRadio
     //se for igual add um toggle
-    dynamicRadio.forEach((e => {
-        e.getAttribute("data-val") === t && e.classList.toggle('active')
-    })),
+    dynamicRadio.forEach(e => {
+        e.getAttribute("data-val") === arrayDataVal && e.classList.toggle('active')
+    }),
 
-        modalBox.forEach((e => {
-            e.getAttribute("data-val") === t && e.classList.toggle('active')
-        })),
+        modalBox.forEach(e => {
+            e.getAttribute("data-val") === arrayDataVal && e.classList.toggle('active')
+        }),
 
         modalBoxBonationAmount.forEach((e => {
-            e.getAttribute('data-val') === t && e.classList.toggle('active')
+            e.getAttribute('data-val') === arrayDataVal && e.classList.toggle('active')
         }))
 
     //abrir modal thanks
-    reward.forEach((e => {
+    reward.forEach(e => {
         e.addEventListener('click', () => {
             modalThankas.classList.add('active')
         })
-    }))
+    })
 }
 
 const hamburger = document.querySelector('.nav-mobile');
@@ -77,9 +77,9 @@ hamburger.addEventListener('click', () => {
     navList.classList.toggle('active')
 })
 
-modalBoxRadio.forEach((e => {
+modalBoxRadio.forEach(e => {
     e.addEventListener('click', updateRadioEvents)
-}))
+})
 
 gotIt.addEventListener('click', () => {
     modalThankas.classList.remove('active')

@@ -19,11 +19,11 @@
 }
 
 body{
+    background-color: rgb(247, 246, 246);
     max-width: 1440px;
     width: 100%;
-    margin: auto;
-    background-color: rgb(247, 246, 246);
     min-height: 100vh;
+    margin: auto;
     overflow-x: hidden;
 }
 
@@ -37,7 +37,7 @@ main{
 }
 
 .header{
-    background-image: url('/images/image-hero-desktop.jpg');
+    background-image: url('../images/image-hero-desktop.jpg');
     background-repeat: no-repeat;
     width: 100%;
     min-height: 374px;
@@ -259,8 +259,12 @@ main{
 }
  
 @media (max-width:920px) {
+    body , html{
+        position: relative;
+    }
+
     .header {
-        background-image: url('/images/image-hero-mobile.jpg');
+        background-image: url('../images/image-hero-mobile.jpg');
     }
 
     .nav-mobile{
@@ -286,12 +290,14 @@ main{
         flex-direction: column;
         background-color: rgb(242, 242, 242);
         border-radius: 5px;
-        transform: translateX(120%);
+        transform: translateX(120%); 
         transition: .3s ease;
         z-index: 100;
+        display: none;
     }
 
     .nav-list.active{
+        display: block;
         transform: translateX(0);
     }
 
