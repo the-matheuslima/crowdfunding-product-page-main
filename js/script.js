@@ -27,7 +27,7 @@ const gotIt = document.querySelector('.got-it')
 
 function showModal() {
     modal.classList.add('active')
-    bodyy.style.position = 'fixed'
+    bodyy.style.position = 'inherit'
 }
 
 function removeModal() {

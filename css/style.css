@@ -258,7 +258,7 @@ main{
     opacity: 0.4;
 }
  
-@media (max-width:920px) {
+@media (max-width:693px) {
     body , html{
         position: relative;
     }
@@ -270,7 +270,7 @@ main{
     .nav-mobile{
         cursor: pointer;
         display: block;
-        background-image: url(/images/icon-hamburger.svg);
+        background-image: url('/images/icon-hamburger.svg');
         z-index: 1001;
         width: 16px;
         height: 15px;
@@ -278,7 +278,7 @@ main{
     }
 
     .nav-mobile.active{
-        background-image: url(/images/icon-close-menu.svg);
+        background-image: url('/images/icon-close-menu.svg');
         z-index: 1000;
         background-repeat: no-repeat;
     }
